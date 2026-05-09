@@ -9,6 +9,7 @@ body {
     background: #0a0a0a;
     color: #e0e0e0;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -27,17 +28,19 @@ header {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #00ffff;
     font-family: monospace;
+    white-space: nowrap;
 }
 
 nav a {
     color: #e0e0e0;
     text-decoration: none;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
     transition: color 0.3s;
+    font-size: 0.9rem;
 }
 
 nav a:hover {
@@ -53,7 +56,7 @@ nav a:hover {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    padding: 6rem 5% 4rem;
+    padding: 5rem 1rem 3rem;
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
@@ -63,24 +66,25 @@ nav a:hover {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
     align-items: center;
 }
 
 .hero-text h1 {
-    font-size: 3.5rem;
+    font-size: 2.2rem;
     background: linear-gradient(135deg, #00ffff, #0088ff);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    word-break: break-word;
 }
 
 .typing-wrapper {
-    font-size: 1.8rem;
-    min-height: 3rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    min-height: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .typed-text {
@@ -97,22 +101,25 @@ nav a:hover {
 }
 
 .description {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #b0b0b0;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
 }
 
 .cta-buttons {
     display: flex;
-    gap: 1rem;
+    gap: 0.8rem;
+    flex-wrap: wrap;
 }
 
 .btn {
-    padding: 0.8rem 1.5rem;
+    padding: 0.7rem 1.2rem;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s;
+    font-size: 0.9rem;
 }
 
 .btn.primary {
@@ -137,13 +144,16 @@ nav a:hover {
 .code-block {
     background: #1e1e1e;
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 1rem;
     border-left: 4px solid #00ffff;
+    overflow-x: auto;
 }
 
 .code-block pre {
     font-family: monospace;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
 .code-keyword {
@@ -156,32 +166,34 @@ nav a:hover {
 
 /* Skills Section */
 .skills {
-    padding: 4rem 5%;
+    padding: 3rem 1rem;
     background: #0f0f0f;
     text-align: center;
 }
 
 .skills h2, .projects h2, .experience h2, .education h2, .contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
     color: #00ffff;
+    word-break: break-word;
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
     max-width: 800px;
     margin: 0 auto;
 }
 
 .skill-card {
     background: #1a1a1a;
-    padding: 1rem;
+    padding: 0.8rem;
     border-radius: 8px;
     text-align: center;
     transition: transform 0.3s;
     border: 1px solid rgba(0, 255, 255, 0.2);
+    font-size: 0.9rem;
 }
 
 .skill-card:hover {
@@ -190,15 +202,15 @@ nav a:hover {
 }
 
 .skill-card i {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #00ffff;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 /* Projects Section */
 .projects {
-    padding: 4rem 5%;
+    padding: 3rem 1rem;
 }
 
 .projects-grid {
@@ -209,7 +221,7 @@ nav a:hover {
 .project-card {
     background: #1a1a1a;
     border-radius: 12px;
-    padding: 2rem;
+    padding: 1.2rem;
     border: 1px solid rgba(0, 255, 255, 0.3);
 }
 
@@ -217,65 +229,70 @@ nav a:hover {
     display: inline-block;
     background: rgba(0, 255, 255, 0.2);
     color: #00ffff;
-    padding: 0.3rem 0.8rem;
+    padding: 0.2rem 0.6rem;
     border-radius: 20px;
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
+    font-size: 0.7rem;
+    margin-bottom: 0.8rem;
 }
 
 .project-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    word-break: break-word;
 }
 
 .project-desc {
     color: #b0b0b0;
     margin-bottom: 1rem;
+    font-size: 0.9rem;
 }
 
 .project-tech {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .project-tech span {
     background: rgba(0, 255, 255, 0.1);
-    padding: 0.3rem 0.8rem;
+    padding: 0.2rem 0.6rem;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: #00ffff;
 }
 
 .project-features h4 {
     margin-bottom: 0.5rem;
     color: #ffffff;
+    font-size: 0.95rem;
 }
 
 .project-features ul {
     list-style: none;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .project-features li {
-    padding: 0.3rem 0;
+    padding: 0.2rem 0;
     color: #b0b0b0;
+    font-size: 0.85rem;
 }
 
 .project-links {
-    padding-top: 1rem;
+    padding-top: 0.8rem;
     border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 .repo-info {
     color: #888;
     font-family: monospace;
+    font-size: 0.8rem;
 }
 
 /* Experience Timeline */
 .experience {
-    padding: 4rem 5%;
+    padding: 3rem 1rem;
     background: #0f0f0f;
 }
 
@@ -286,34 +303,41 @@ nav a:hover {
 
 .timeline-item {
     display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .timeline-date {
     color: #00ffff;
     font-weight: bold;
+    font-size: 0.85rem;
 }
 
 .timeline-content {
     background: #1a1a1a;
-    padding: 1rem;
+    padding: 0.8rem;
     border-radius: 8px;
 }
 
 .timeline-content h3 {
     color: #ffffff;
+    font-size: 1rem;
 }
 
 .timeline-content h4 {
     color: #888;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.timeline-content p {
+    font-size: 0.85rem;
 }
 
 /* Education */
 .education {
-    padding: 4rem 5%;
+    padding: 3rem 1rem;
     text-align: center;
 }
 
@@ -321,27 +345,29 @@ nav a:hover {
     max-width: 600px;
     margin: 0 auto;
     background: #1a1a1a;
-    padding: 2rem;
+    padding: 1.2rem;
     border-radius: 12px;
 }
 
 .edu-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
 }
 
 .edu-major {
     color: #00ffff;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
 }
 
 .edu-year {
     color: #888;
+    font-size: 0.85rem;
 }
 
 /* Contact */
 .contact {
-    padding: 4rem 5%;
+    padding: 3rem 1rem;
     background: #0f0f0f;
     text-align: center;
 }
@@ -354,21 +380,24 @@ nav a:hover {
 .contact-info {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.8rem;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    padding: 0.8rem;
     background: #1a1a1a;
     border-radius: 8px;
+    word-break: break-all;
+    font-size: 0.85rem;
 }
 
 .contact-item i {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: #00ffff;
 }
 
@@ -384,37 +413,48 @@ nav a:hover {
 /* Footer */
 footer {
     text-align: center;
-    padding: 2rem;
+    padding: 1.5rem;
     background: #0a0a0a;
     border-top: 1px solid rgba(0, 255, 255, 0.2);
     color: #666;
+    font-size: 0.8rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Responsive - untuk layar lebih kecil */
+@media (min-width: 768px) {
     .hero-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
     
     .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
     
     .typing-wrapper {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+    }
+    
+    .description {
+        font-size: 1rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
     
     .timeline-item {
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
+        grid-template-columns: 180px 1fr;
+        gap: 1.5rem;
     }
     
     nav {
-        display: none;
+        display: flex !important;
     }
-    
-    nav.active {
-        display: flex;
+}
+
+@media (max-width: 767px) {
+    nav {
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 100%;
@@ -422,13 +462,19 @@ footer {
         width: 100%;
         background: #0a0a0a;
         padding: 1rem;
+        border-bottom: 1px solid rgba(0, 255, 255, 0.2);
     }
     
-    nav.active a {
+    nav.active {
+        display: flex;
+    }
+    
+    nav a {
         margin: 0.5rem 0;
+        padding: 0.5rem;
     }
     
     .menu-toggle {
         display: block;
     }
-}
+                           }
