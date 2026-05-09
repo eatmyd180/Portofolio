@@ -203,7 +203,7 @@ const waContact = document.getElementById('whatsappContact');
 if (waContact) {
     waContact.addEventListener('click', (e) => {
         e.preventDefault();
-        const phoneNumber = '62895308242211'; // 0895-0824-2211
+        const phoneNumber = '6289508242211'; // 0895-0824-2211
         const message = 'Hello, I saw your portfolio!';
         const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         window.open(waUrl, '_blank');
